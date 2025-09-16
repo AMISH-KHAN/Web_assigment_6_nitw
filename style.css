@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #030502;
+    color: white;
+}
+
+header{
+    background: url(./assets/hero.jfif) no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    display:flex ;
+ align-items: center;
+ justify-content:center ;
+}
+
+
+nav{
+    display: flex;
+    position:fixed ;
+    top: 0;
+    /* border: 2px solid red; */
+    width: 100%;
+    padding: 1rem 0.5rem;
+    background-color: #030502;
+    z-index: 100;
+}
+
+.link-container{
+    margin: auto;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.link{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.link>a{
+    text-decoration: none;
+    font-size: 19px;
+    color: white;
+}
+
+.link:after{
+    border: 2px solid black;
+    content: "";
+    width: 0;
+    transition: width 1s;
+}
+.link:hover:after{
+    width: 100%;
+    border: 2px solid #ff4900;
+    /* transition:width 1s; */
+}
+
+.hero-text{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+}
+
+.hero-heading{
+    font-size: 3rem;
+}
+.hero-heading>span{
+    color: #ff4900;
+}
+.hero-para{
+    text-align: center;
+    margin:1rem ;
+    width: 57%;
+    /* border: 2px solid red; */
+    font-size: 2.5rem;
+    color: white;
+    display: flex;
+}
+
+.hero-button{
+    margin: 1rem auto;
+    width: 33%;
+    /* margin: auto; */
+    height: 26px;
+    border-radius: 12px;
+    border: none;
+    background: #ff4900;
+    font-size: 22px;
+    color: white;
+
+}
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #ff4900; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 57% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ff4900; }
+  }
+
+
+section{
+    padding: 3rem 1rem;
+}
+
+section>h1{
+text-align: center;
+font-size: 3rem;
+}
+.projects{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 1rem;
+}
+
+.project-card{
+    width: 33%;
+    margin: 0.5rem;
+    height: 15.5rem;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.5s,transform  1s;
+}
+
+.project-card:hover{
+    box-shadow: 0px 0px 14px #9e9e9ee0;;
+    transform: scale(1.05);
+}
+
+.project-card>img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: transform 1s;
+}
+.project-card>img:hover{
+    transform: scale(1.4)
+}
+.project-card>p{
+    position:absolute;
+    /* z-index: 10; */
+    bottom: -200px;
+    height: 30%;
+    background-color:#0305028e;
+    transition: bottom 0.4s;
+    text-align: center;
+}
+.project-card:hover .project-text{
+    bottom: 0;
+}
+.service-container{
+    justify-content: ;
+}
+.service-card{
+    width: 30%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2a2b2a;
+    border-radius: 12px;
+    margin: 1rem;
+    transition: background 2s;
+}
+.service-card:hover{
+    background: #1a1a1a;
+}
+.service-card>img{
+    width: 20%;
+    background: transparent;
+}
+.service-card>p{
+    text-align: center;
+
+}
+
+.service-card:hover .round-animation{
+    animation-name: round ;
+    animation-duration: 2s;
+}
+
+@keyframes round{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 45%;
+    justify-content: space-around;
+    padding: 2rem 3rem;
+}
+.input-field{
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 22px;
+    margin: 1rem;
+}
+
+.input-button{
+    margin: 1rem auto;
+    border-radius: 12px;
+    width: 30%;
+    height: 2.5rem;
+    font-size: 22px;
+    background-color: #2a2b2a;
+    color: white;
+    border: none;
+}
+.input-button:hover{
+    cursor: pointer;
+}
+
+textarea{
+    outline:none;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 1rem;
+    font-size: 22px;
+}
+.social{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.social-icon:hover{
+    position: relative;
+    animation: bounce .5s infinite;
+}
+
+@keyframes bounce{
+    0%{
+        top: 0;
+    }
+    50%{
+        top: -10px;
+        
+    }
+    100%{
+        top: 0;
+
+    }
+}
